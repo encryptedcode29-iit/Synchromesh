@@ -13,7 +13,7 @@
     { id: 'SPY',     name: 'S&P 500',  color: '#4ADE80', type: 'Macro'  },
   ];
 
-  const TWELVE_DATA_API_KEY = process.env.REACT_APP_TWELVE_DATA_KEY;
+const TWELVE_DATA_API_KEY = import.meta.env.VITE_TWELVE_DATA_KEY;
 
   const toReturns = (prices) =>
     prices.slice(1).map((p, i) => (p - prices[i]) / prices[i]);
